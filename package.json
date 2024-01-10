@@ -29,5 +29,14 @@
   "homepage": "https://github.com/typesense/algolia-query-rules-to-typesense#readme",
   "engines": {
     "node": "20"
+  },
+  "devDependencies": {
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-prettier": "5.1.2",
+    "prettier": "3.1.1"
+  },
+  "dependencies": {
   }
 }
