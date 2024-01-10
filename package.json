@@ -1,6 +1,6 @@
 {
   "name": "algolia-query-rules-to-typesense",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A CLI utility to import Algolia's query rules JSON into Typesense",
   "main": "bin/index.js",
   "bin": "bin/index.js",
@@ -37,6 +37,5 @@
     "eslint-plugin-prettier": "5.1.2",
     "prettier": "3.1.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
