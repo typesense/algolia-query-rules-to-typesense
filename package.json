@@ -4,6 +4,9 @@
   "description": "A CLI utility to import Algolia's query rules JSON into Typesense",
   "main": "bin/index.js",
   "bin": "bin/index.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/typesense/algolia-query-rules-to-typesense.git"
