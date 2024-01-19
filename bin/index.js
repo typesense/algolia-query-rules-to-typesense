@@ -40,15 +40,19 @@ function convertAlgoliaRuleToTypesense(algoliaRule) {
     // Conditions
 
     // Curate by Keyword
-    if (algoliaCondition.anchoring && algoliaCondition.pattern) {
+    if (
+      algoliaCondition.anchoring != null &&
+      algoliaCondition.pattern != null
+    ) {
       typesenseOverride.rule = typesenseOverride.rule ?? {};
-      typesenseOverride.rule.query = algoliaCondition.pattern;
+      typesenseOverride.rule.query =
+        algoliaCondition.pattern === "" ? "*" : algoliaCondition.pattern;
       typesenseOverride.rule.match =
         algoliaCondition.anchoring === "is" ? "exact" : "contains";
     }
 
     // Curate by Filter
-    if (algoliaCondition.filters) {
+    if (algoliaCondition.filters != null) {
       typesenseOverride.rule = typesenseOverride.rule ?? {};
       typesenseOverride.rule.filter = convertAlgoliaFilterToTypesense(
         algoliaCondition.filters,
@@ -56,7 +60,7 @@ function convertAlgoliaRuleToTypesense(algoliaRule) {
     }
 
     // Curate by Tags
-    if (algoliaCondition.context) {
+    if (algoliaCondition.context != null) {
       typesenseOverride.rule = typesenseOverride.rule ?? {};
       typesenseOverride.rule.tags = [algoliaCondition.context];
     }
