@@ -95,7 +95,7 @@ function convertAlgoliaRuleToTypesense(algoliaRule) {
       typesenseOverride.excludes = algoliaRule.consequence?.hide?.map(
         (algoliaHideItem) => {
           return {
-            id: algoliaHideItem.objectIDs,
+            id: algoliaHideItem.objectID,
           };
         },
       );
