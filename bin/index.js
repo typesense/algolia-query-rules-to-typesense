@@ -54,7 +54,7 @@ function convertAlgoliaRuleToTypesense(algoliaRule) {
     // Curate by Filter
     if (algoliaCondition.filters != null) {
       typesenseOverride.rule = typesenseOverride.rule ?? {};
-      typesenseOverride.rule.filter = convertAlgoliaFilterToTypesense(
+      typesenseOverride.rule.filter_by = convertAlgoliaFilterToTypesense(
         algoliaCondition.filters,
       );
     }
