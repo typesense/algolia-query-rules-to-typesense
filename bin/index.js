@@ -88,7 +88,7 @@ function convertAlgoliaRuleToTypesense(algoliaRule) {
         (algoliaPromoteItem) => {
           return {
             id: algoliaPromoteItem.objectIDs[0],
-            position: algoliaPromoteItem.position,
+            position: algoliaPromoteItem.position + 1,
           };
         },
       );
