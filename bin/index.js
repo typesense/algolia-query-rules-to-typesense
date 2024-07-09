@@ -130,6 +130,14 @@ function convertAlgoliaRuleToTypesense(algoliaRule) {
       );
     }
 
+    // Another form of replace query
+    if (
+      algoliaRule.consequence?.params?.query != null &&
+      typeof algoliaRule.consequence?.params?.query === "string"
+    ) {
+      typesenseOverride.replace_query = algoliaRule.consequence?.params?.query;
+    }
+
     // Replace query
     if (
       algoliaRule.consequence?.params?.query?.edits != null &&
