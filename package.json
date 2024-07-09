@@ -1,6 +1,6 @@
 {
   "name": "algolia-query-rules-to-typesense",
-  "version": "0.1.4",
+  "version": "0.2.0-0",
   "description": "A CLI utility to import Algolia's query rules JSON into Typesense",
   "main": "bin/index.js",
   "bin": "bin/index.js",
